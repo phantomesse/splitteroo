@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Splitteroo</title>
+</head>
+
+<body>
+  <h1>Splitteroo</h1>
+
+  <main>
+    <section id="bill-section">
+      <label>Total bill</label>
+      <div class="money-input">
+        <input id="total-bill-input" type="number" placeholder="100.00" />
+      </div>
+
+      <button id="add-item-button">Add item</button>
+
+      <label>Tax & tip</label>
+      <div class="money-input">
+        <input id="tax-tip-input" type="number" disabled="true" value="0.00" />
+      </div>
+    </section>
+
+
+    <section id="people-section">
+      <div class="person-avatar"></div>
+      <button id="add-person-button" class="add-button"></button>
+    </section>
+
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

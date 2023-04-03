@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #00b894;
+  --accent-color: #ff6c00;
+
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #e3ecec;
+
+  --primary-fg-color: #2e3030;
+  --secondary-fg-color: #445151;
+
+  --grid: 8px;
+  --side-padding: calc(var(--grid) * 3);
+}
+
+html,
+body {
+  background: var(--primary-color);
+  border: 0;
+  box-sizing: border-box;
+  color: var(--primary-fg-color);
+  font: 16px 'Quicksand', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--primary-bg-color);
+  font-size: calc(var(--grid) * 4);
+  line-height: calc(var(--grid) * 5);
+  margin: var(--side-padding);
+}
+
+main {
+  --border-radius: calc(var(--grid) * 4);
+  background: var(--primary-bg-color);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding: calc(var(--grid) * 4);
+  margin: 0 var(--side-padding);
+}
+
+label {
+  white-space: nowrap;
+}
+
+button,
+input {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.money-input {
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+}
+
+.money-input::before {
+  content: '$';
+}
+
+#bill-section {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: var(--grid);
+}
+
+#add-item-button {
+  --height: calc(var(--grid) * 4);
+  border-radius: calc(var(--height) / 2);
+  border: 2px var(--accent-color) solid;
+  color: var(--accent-color);
+  font-weight: 600;
+  grid-column: 1 / -1;
+  height: var(--height);
+  margin: calc(var(--grid) * 2) auto;
+  padding: 0 calc(var(--grid) * 2);
+  width: 100%;
+}
+
+#add-item-button:active {
+  color: var(--primary-bg-color);
+  background: var(--accent-color);
+}
+
+.person-avatar,
+#add-person-button {
+  --size: calc(var(--grid) * 6);
+  width: var(--size);
+  height: var(--size);
+  border-radius: calc(var(--size) / 2);
+}
+
+.person-avatar {
+
+}
+
+.associated-people {
+  display: flex;
+}
+
+.associated-person {
+  --size: calc(var(--grid) * 3);
+  width: var(--size);
+  height: var(--size);
+  border-radius: calc(var(--size) / 2);
+}
+
+.add-button {
+  background-color: var(--secondary-bg-color);
+  background-image: url('assets/icon-add.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60% 60%;
+}
+
+.item-details {
+  display: flex;
+}

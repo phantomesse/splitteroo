@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #00b894;
+  --accent-color: #ff6c00;
+
+  --primary-bg-color: #fff;
+  --secondary-bg-color: #e3ecec;
+
+  --primary-fg-color: #2e3030;
+  --secondary-fg-color: #445151;
+
+  --grid: 8px;
+  --side-padding: calc(var(--grid) * 3);
+  --label-width: calc(var(--grid) * 20);
+}
+
+html,
+body {
+  background: var(--primary-color);
+  border: 0;
+  box-sizing: border-box;
+  color: var(--primary-fg-color);
+  font: 18px 'Quicksand', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+[contenteditable] {
+  outline: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 640px;
+}
